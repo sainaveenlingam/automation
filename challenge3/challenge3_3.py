@@ -12,21 +12,15 @@ class Challenge3(unittest.TestCase):
     def tearDown(self):
         # code to close webdriver
         self.driver.close()
-        print('in tear down method')
-
-    def test_challenge3forloopsecondsection(self):
+    def test_challenge3forloop(self):
         self.driver.get("https://www.copart.com")
         #link = self.driver.find_elements(By.XPATH, "//*[@ng-if=\"popularSearches\"]//a")
         link = self.driver.find_elements_by_xpath("//*[@id=\"tabTrending\"]/div[1]//a")
-
-        for item in link:
-        #print(element.text)
-            print(item.text + ":" + item.get_property("href"))
+        i = 0
+        while(i<len(link)):
+            print(link[i].text + ":" + link[i].get_property("href"))
+            i = i+1
 
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
