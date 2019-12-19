@@ -16,7 +16,8 @@ class Challenge3(unittest.TestCase):
 
     def test_challenge3forloopsecondsection(self):
         self.driver.get("https://www.copart.com")
-        link = self.driver.find_elements_by_xpath("//*[@id=\"tabTrending\"]/div[3]//a")
+        # link = self.driver.find_elements_by_xpath("//*[@id=\"tabTrending\"]/div[3]//a")
+        link = self.driver.find_elements(By.XPATH, "//*[@ng-if=\"popularSearches\"]/../div[3]//a")
 
         for item in link:
         #print(element.text)

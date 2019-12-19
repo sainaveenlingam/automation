@@ -21,8 +21,8 @@ class Challenge3(unittest.TestCase):
 
         for item in link:
         #print(element.text)
-            print(item.text + ":" + item.get_property("href"))
-
+            #print(item.text + ":" + item.get_property("href"))
+            print(item.text + ":" + item.get_attribute("href"))
 
 if __name__ == '__main__':
     unittest.main()
